@@ -20,8 +20,8 @@ ML-project1/
 │   linear_regression_prac.py
 │   normal_equation_prac.py
 │
-├── PROJECT/
-│   └── California_housing_median.py   ← (Main project script)
+├── PROJECT
+│    California_housing_median.py   ← (Main project script)
 │
 └── README.md
 </pre>
@@ -40,7 +40,7 @@ ML-project1/
 
 <hr/>
 
-<h2>📊 Results</h2>
+<h2> Results</h2>
 <ul>
   <li><b>Train MSE:</b> 0.52359</li>
   <li><b>Test MSE:</b> 0.529377</li>
@@ -72,7 +72,7 @@ This confirms that <b>income is one of the strongest predictors</b> of house pri
 
 <hr/>
 
-<h2>▶ How to Run</h2>
+<h2> How to Run</h2>
 
 <pre>
 python -m venv .venv
@@ -101,5 +101,6 @@ python PROJECT/California_housing_median.py
   <li>Only <b>NumPy + Pandas + Matplotlib</b></li>
   <li>This is my <b>first end-to-end ML project</b></li>
 </ul>
+
 
 

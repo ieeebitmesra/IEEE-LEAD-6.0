@@ -15,10 +15,10 @@ matrix math, and creating visualizations.
 ML-project1/
 │
 ├── PRACTICE/
-│   ├── numpy_prac_1.py
-│   ├── prac_pandaas.py
-│   ├── linear_regression_prac.py
-│   └── normal_equation_prac.py
+│   numpy_prac_1.py
+│   prac_pandaas.py
+│   linear_regression_prac.py
+│   normal_equation_prac.py
 │
 ├── PROJECT/
 │   └── California_housing_median.py   ← (Main project script)
@@ -63,7 +63,7 @@ The scatter plot shows that:
 <ul>
   <li>As <b>median income increases</b>, <b>median house value increases</b> too.</li>
   <li>The relationship is <b>positively correlated</b> but not perfectly linear.</li>
-  <li>There is a <b>capped/saturation effect</b> where values hit the upper limit.</li>
+  
 </ul>
 
 <p>
@@ -101,4 +101,5 @@ python PROJECT/California_housing_median.py
   <li>Only <b>NumPy + Pandas + Matplotlib</b></li>
   <li>This is my <b>first end-to-end ML project</b></li>
 </ul>
+
 

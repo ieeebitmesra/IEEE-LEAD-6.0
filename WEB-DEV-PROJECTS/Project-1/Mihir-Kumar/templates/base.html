@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            MK
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div class="pages">
+            <p>Pages</p>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </div>
+        <div class="socials">
+            <p>Socials</p>
+            <a href="https://github.com/M141R">Github</a>
+            <a href="www.linkedin.com/in/mihirkumar027">LinkedIn</a>
+            <a href="https://leetcode.com/u/M141R/">LeetCode</a>
+        </div>
+    </footer>
+</body>
+</html>

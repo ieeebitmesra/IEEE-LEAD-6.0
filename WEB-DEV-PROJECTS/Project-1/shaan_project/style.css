@@ -1,0 +1,316 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(77deg, #da5ed4 10%, #e8bc63 90% );
+}
+
+h1{
+     font-family: 'Momo Signature', cursive;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top:2px;
+    text-transform: capitalize;
+    line-height: 3em;
+    span{
+        color:#3647fe73;
+    }
+    z-index: -1;
+    font-size: 2.3em;
+    margin-bottom: 20px;
+    text-shadow: black 1px 2px 2px;
+    color: rgba(217, 146, 23, 0.676);
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+    border: 2px solid rgb(4, 187, 144);
+    border-radius: 30px 30px 0px 0px;
+    margin: 8em 1em 0em 1em;
+    height: 230vh;
+    background-color: antiquewhite;
+    
+}
+.navbar {
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top:0px;
+    gap: 20px;
+    padding: 10px 20px;
+    justify-content: center;
+    border: 8px solid rgb(1, 28, 22,);
+    border-radius: 30px ;
+    background-color: rgba(0, 0, 0) ;
+    
+}
+
+
+ul{
+    display: flex;
+    gap: 20px;
+    li{
+        border:2px solid #d8dade;
+        background-color: azure;
+        border-radius: 8px ;
+        box-shadow: #eeeb47 2px 1px;
+    }
+}
+
+li:hover {
+            background-color: lightblue;
+            text-align: center;
+            text-transform: uppercase;
+            transform: scale(1.1);
+            box-shadow: -20px 0px 9px -10px red;  /*horizontal vertical blur spread color */
+        }
+
+h2{
+    font-family: 'Momo Signature', cursive;
+    font-size: 5em;
+    margin-top: 42px;
+    margin-bottom: 20px;
+}
+.word{
+    font-family: 'Momo Signature', cursive;
+    color: rgb(5, 60, 80);
+    backdrop-filter: blur(5px);
+}
+.item {
+    /* display: flex;
+    flex-direction: row; */
+        border: 1px solid black;
+        width:45% ;
+        height: 210vh;
+        /* background-color: rgb(137, 167, 231); */
+        background-image: url('img/img2.jpg');
+        background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        padding: 10px;
+        margin: 10px;
+        text-align:left;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.5s ease;
+    }
+    .item:hover, .cards:hover {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/021/053/425/original/abstract-shape-colorful-background-and-texture-soft-color-suitable-for-creative-industries-free-vector.jpg');
+        text-align: center;
+        /* padding: 10px; */
+        text-transform: uppercase;
+        transform: scale(1.02);
+            box-shadow: -20px 0px 9px -10px red;  /*horizontal vertical blur spread color */
+        }
+.one {
+    top: 20px;
+    border-radius: 0px 60px ;
+    position: relative;
+    right: 27%;
+}
+.two {
+    bottom: 120px;
+    border-radius: 60px 0px ;
+    position: relative;
+    left: 27%;
+}
+
+.cards{
+            position: relative;
+            bottom: 15em;
+            right: 27%;
+            border: 2px solid black;
+            padding: 20px;border-radius: 0px 60px ;
+              position: relative;
+            right: 27%;
+             width:45% ;
+                height: 210vh;
+            
+          background-image: url('img/img2.jpg');
+          background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+}
+.text1 {
+    position: absolute;
+    right: 2em;
+    width: 40%;
+            top: 88em;
+            transform: translateX(-10px);
+            background-color: lightblue;
+            padding: 10px;
+            z-index: 3;
+            margin-bottom: 10px;
+        }
+        
+.text2 {
+            width: 40%;
+            position: absolute;
+            right: 2em;
+            top: 90em;
+            transform: rotate(7deg);
+            /* transform-origin: top right; */
+            background-color: lightcoral;
+            padding: 10px;
+        }
+    
+.default{
+    display: inline;
+    margin-left: 25%;
+    background-color: aliceblue;
+}
+.new {
+    display: none;
+}
+.item:hover , .cards:hover{
+    .default {
+        display: none;
+    }
+    .new{
+        
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+        margin-top: 60px;
+        align-items: center;
+        span{
+            color: red;
+            font-weight: bold;
+            font-family:'Times New Roman', Times;
+            font-size: 2em;
+        }
+    }
+}
+
+
+.sk{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+.wordy{
+    font-family: 'Momo Signature', cursive;
+    font-size: 2em;
+    color: rgb(5, 60, 80);
+    border: 2px solid rgb(5, 5, 5);
+    padding: 5px;
+    border-radius: 50px 50px 0px 0px;
+}
+.skill{
+    /* margin: 20px; */
+    background:linear-gradient(144deg,#2fbf71 20%,rgb(176, 62, 186)80%);
+    box-shadow: red 2px 2px 5px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    margin: 10px;
+    align-items: center;
+
+    border: 2px solid black;
+}
+
+
+.skill:hover {
+    background-color: lightgreen;
+    transform: scale(1.02);
+    box-shadow: 20px 20px 9px -12px red;  /*horizontal vertical blur spread color */
+    img{
+    animation: skillimgscroll 5s linear infinite;
+    }
+}
+
+
+footer{
+            width: 100%;
+            height: 40px;
+            background-color: rgb(0, 0, 1);
+            margin-top: 2em;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-family: cursive, Helvetica, sans-serif;
+        }
+
+
+
+#contact{
+    width:100%;
+    padding: 0.625rem; 
+    background: url('img/img2.jpg'); 
+    background-size: cover;
+} 
+.box-wrapper{
+    position: relative;
+    
+    margin:auto;
+    border-radius:22px;
+}
+
+.info-title{
+    text-align:left;
+    font-size: 2.5rem;
+    letter-spacing: 0.03125rem;
+}
+
+.form-wrap{
+    width:100%;
+    float: right;
+    padding: 2.5rem 1.5625rem 2.1875rem 1.5625rem; 
+    border-radius:20px;
+    background: #10101a;
+}
+.form-title{
+    text-align:left; 
+    color: #fff;
+    margin:1.4375rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.03125rem; 
+    font-weight: 700;
+} 
+.form-field{
+    display: table;
+    width:100%; 
+    height: 3em;
+    padding:0.9375rem 0.3125rem 0.3125rem 0.3125rem;
+}
+.form-field input,
+.form-field textarea{
+    border:none;
+    outline: none;
+    background: none;
+    font-size:1.25rem;
+    color:#3aa91e;
+    padding: 1.25rem 0.625rem 1.25rem 0.3125rem;
+    width: 100%;
+}
+.form-field textarea{
+    width:100%;
+    height: 9.375rem;
+    resize:none;
+}
+.form-group{
+    width: 46%;
+    float:left;
+    padding: 0 1.875rem;
+    margin:0.875rem 0.75rem;
+    border-radius: 1.5625rem;
+    box-shadow: inset .5rem .5rem .5rem #5c5c5c,inset -0.5rem -0.5rem 0.5rem #313131;
+}
+.form-field .form-group:last-child{
+    width:96%;
+}

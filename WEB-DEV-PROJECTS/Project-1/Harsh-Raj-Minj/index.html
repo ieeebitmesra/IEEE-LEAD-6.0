@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Harsh Raj Minj</title>
+</head>
+
+<body>
+
+
+<header>
+  <nav class="site-navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <span class="name">Harsh Raj Minj</span>
+      <button class="menu-btn" id="menu-btn">☰</button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#homesweethome">Home</a>
+        <a href="#aboutme">About</a>
+        <a href="#skillsiknow">Skills</a>
+        <a href="#projectsimade">Projects</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero reveal" id="homesweethome">
+    <div class="hero-content">
+        <h1>
+            <span class="sigma"></span><br>
+            I am Harsh<br>
+            Freshman @BIT Mesra
+        </h1>
+    </div>
+</section>
+
+<div class="section-divider reveal"></div>
+
+
+<section class="about reveal" id="aboutme">
+    <div class="about-img"></div>
+
+    <div class="about-text">
+        <p>
+            A passionate <b>student</b> who just began his journey in tech.
+            I am learning C++, Web Dev, and doing Competitive Programming.
+            I also love guitar, YAP'ing, photography, and clouds.
+        </p>
+    </div>
+</section>
+
+<div class="line-reveal reveal"></div>
+
+
+<section class="skills reveal" id="skillsiknow">
+
+    <div class="skill-card music-card">
+    <img src="src/2.jpg" class="album-cover">
+
+    <h2>Guitar & Singing</h2>
+    <p> Here's the song which i played during my farewell. 
+        Its of my practise session.
+    </p>
+
+    <audio id="guitar-audio" src="src/singing.mp3"></audio>
+
+    <button class="play-btn" id="play-btn">▶ Play</button>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+</div>
+
+
+    <div class="skill-card">
+        <h2>Tech Skills</h2>
+        <div class="icon-row">
+            <div class="icon-box"><img src="src/c-.png"><span>C++</span></div>
+            <div class="icon-box"><img src="src/java.png"><span>Java</span></div>
+            <div class="icon-box"><img src="src/html-5.png"><span>HTML</span></div>
+            <div class="icon-box"><img src="src/css-3.png"><span>CSS</span></div>
+            <div class="icon-box"><img src="src/js.png"><span>JavaScript</span></div>
+        </div>
+    </div>
+
+    <div class="skill-card dark">
+        <h2>About My Skills</h2>
+        <p>
+            I mainly code in C++. Alongside, I'm learning frontend development.
+            I enjoy photography and love playing guitarrrr.
+        </p>
+    </div>
+
+</section>
+
+<div class="section-divider reveal"></div>
+
+
+<section class="projects reveal" id="projectsimade">
+    <div class="projects-container">
+
+        <div class="project-card">
+            <h3>Personal Portfolio Website</h3>
+            <p>Built with HTML, CSS, JS. Clean UI with animations.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>CP Codes Repository</h3>
+            <p>A collection of all the solved problems of codeforces contest in which i have participated</p>
+        </div>
+
+       <a href="photography.html" class="project-card photo-preview">
+    <img src="src/da.jpg" class="preview-img">
+    <div class="text">
+        <h3>Photography Collection</h3>
+        <p>Clouds & landscape Pictures
+            <br> <b>Click to see more.</b></p>
+    </div>
+</a>
+
+
+
+    </div>
+</section>
+
+
+<footer>
+    <div class="foot">
+
+        <div class="footer-col">
+            <h3 class="signature">Harsh Raj Minj</h3>
+            <p class="thanks">Thanks for visiting!</p>
+        </div>
+
+        <div class="footer-col">
+            <p class="foot-title">Links</p>
+            <a href="#homesweethome">Home</a>
+            <a href="#aboutme">About</a>
+            <a href="#skillsiknow">Skills</a>
+            <a href="#projectsimade">Projects</a>
+        </div>
+
+       <div class="footer-col">
+    <p class="foot-title">Social</p>
+
+    <a href="https://www.instagram.com/harshraj.hrm" target="_blank" class="social-link">
+        <img src="src/instagram.png" alt="Instagram">
+        <span>Instagram</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/harsh-raj-minj-630351380" target="_blank" class="social-link">
+        <img src="src/linkedin.png" alt="LinkedIn">
+        <span>LinkedIn</span>
+    </a>
+</div>
+
+
+        <p class="tagline">Life doesn't goes as expected!</p>
+        <p class="copyright">
+            © <span id="year"></span> Harsh Raj Minj — All Rights Reserved.
+        </p>
+
+    </div>
+</footer>
+
+<script>
+   
+    const btn = document.getElementById("menu-btn");
+    const nav = document.getElementById("nav-links");
+    btn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+
+document.addEventListener("scroll", () => {
+    document.querySelectorAll(".reveal").forEach(elem => {
+        const rect = elem.getBoundingClientRect().top;
+        if (rect < window.innerHeight - 100) {
+            elem.classList.add("active");
+        }
+    });
+});
+
+
+window.addEventListener("load", () => {
+    document.dispatchEvent(new Event("scroll"));
+});
+
+
+const audio = document.getElementById("guitar-audio");
+const playBtn = document.getElementById("play-btn");
+const progressBar = document.getElementById("progress-bar");
+
+playBtn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        playBtn.textContent = "⏸ Pause";
+    } else {
+        audio.pause();
+        playBtn.textContent = "▶ Play";
+    }
+});
+
+audio.addEventListener("timeupdate", () => {
+    const progress = (audio.currentTime / audio.duration) * 100;
+    progressBar.style.width = progress + "%";
+});
+
+audio.addEventListener("ended", () => {
+    playBtn.textContent = "▶ Play";
+    progressBar.style.width = "0%";
+});
+
+</script>
+
+
+
+</body>
+</html>

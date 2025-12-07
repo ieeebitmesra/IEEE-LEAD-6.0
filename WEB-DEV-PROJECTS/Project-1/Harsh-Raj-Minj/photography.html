@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography | Harsh Raj Minj</title>
+    <link rel="stylesheet" href="src/gallary.css">
+</head>
+
+<body>
+
+
+<div class="photo-header">
+    <a href="index.html" class="back-btn">← Back</a>
+    <h1>Photography Collection</h1>
+</div>
+
+
+<section class="masonry">
+
+  
+    <img src="src/br.jpg" class="m-item">
+    <img src="src/da.jpg" class="m-item">
+    <img src="src/dw.jpg" class="m-item">
+    <img src="src/pl.jpg" class="m-item">
+    <img src="src/mn.jpg" class="m-item">
+    <img src="src/mo.jpg" class="m-item">
+    <img src="src/bus.jpg" class="m-item">
+    <img src="src/tr.jpg" class="m-item">
+    <img src="src/mon.jpg" class="m-item">
+    <img src="src/chaos.jpg" class="m-item">
+    <img src="src/red.jpg" class="m-item">
+    <img src="src/la.jpg" class="m-item">
+    <img src="src/kh.jpg" class="m-item">
+    <img src="src/redtree.jpg" class="m-item">
+    <img src="src/nices.jpg" class="m-item">
+    <img src="src/cons.jpg" class="m-item">
+    <img src="src/flo.jpg" class="m-item">
+   
+
+</section>
+
+
+<div class="lightbox" id="lightbox">
+    <img id="lightbox-img">
+</div>
+
+<script>
+    const items = document.querySelectorAll(".m-item");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+            lightbox.classList.add("active");
+            lightboxImg.src = item.src;
+        });
+    });
+
+    lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+    });
+</script>
+
+</body>
+</html>

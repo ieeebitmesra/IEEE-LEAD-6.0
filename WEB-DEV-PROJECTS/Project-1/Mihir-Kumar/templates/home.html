@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main class="container">
+        <section class="main" id="home">
+            <div class="hero-text">
+                <h1>Hey!,I'm <span class="highlight">Mihir Kumar</span>, <br> Building my way up from "Hello World"</h1>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1" alt="potrait photo">
+            </div>
+        </section>
+        <section class="about" id="about">
+            <h1>About</h1>
+            <p>I'm a 1st year student who fell down the programming rabbit hole and haven't looked back since. Currently mastering C++, Python, and C—learning how computers actually think beneath all the abstractions. <br>
+            I build what I imagine. Whenever an idea strikes, I turn it into a project—learning through doing, debugging through persistence. The challenge of transforming logic into working code is what keeps me hooked.</p>
+        </section>
+        <section class="skills" id="skills">
+            <h1>Skills</h1>
+            <div class="skills-logo">
+                <div class="python">
+                <img src="{{ url_for('static', filename='Python.svg')}}" alt="">
+                <p>Python</p>
+                </div>
+                <div class="cpp">
+                <img src="{{ url_for('static', filename='CPP.svg')}}" alt="">
+                <p>C++</p>
+                </div>
+                <div class="html">
+                <img src="{{ url_for('static', filename='HTML.svg')}}" alt="">
+                <p>Html</p>
+                </div>
+                <div class="css">
+                <img src="{{ url_for('static', filename='CSS.svg')}}" alt="">
+                <p>Css</p>
+                </div>
+                <div class="git">
+                <img src="{{ url_for('static', filename='Git.svg')}}" alt="">
+                <p>Git</p>
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <h1>Projects</h1>
+            <div class="projects-cards">
+                <div class="project">
+                    <a href="https://mihirkblog.netlify.app" target="_blank">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='project1.png') }}" alt="">
+                    </div>
+                    <div class="project-label">
+                            <p>Blog</p>
+                    </div>
+                    </a>
+                </div>
+                <!-- <div class="project">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='project1.png') }}" alt="">
+                    </div>
+                    <div class="project-label">
+                        <p>Portfolio</p>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </main>
+{% endblock content %}

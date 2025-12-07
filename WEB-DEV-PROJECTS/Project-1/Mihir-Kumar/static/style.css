@@ -1,0 +1,440 @@
+/* Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@500&display=swap");
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr1: #222020;
+  --clr2: #fff9f9;
+  --clr3: #00b96d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr1: #fff9f9;
+    --clr2: #222020;
+    --clr3: #00b96d;
+  }
+}
+
+/* TypeScale */
+
+html {
+  font-size: 25px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: false;
+  line-height: 1.65;
+}
+
+p {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: true;
+  line-height: 1.15;
+}
+
+h1,
+.text-size-h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+  font-size: 4.21em;
+}
+
+h2,
+.text-size-h2 {
+  font-size: 3.16em;
+}
+
+h3,
+.text-size-h3 {
+  font-size: 2.37em;
+}
+
+h4,
+.text-size-h4 {
+  font-size: 1.78em;
+}
+
+h5,
+.text-size-h5 {
+  font-size: 1.33em;
+}
+
+.text-caption {
+  font-size: 0.75em;
+}
+
+small,
+.text-small {
+  font-size: 0.56em;
+}
+
+/* Base */
+body {
+  background: var(--clr2);
+  color: var(--clr1);
+}
+
+.container {
+  margin: 0 30px;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+a {
+  color: var(--clr1);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--clr2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  position: relative;
+  color: var(--clr1);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--clr3);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--clr3);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Main */
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 0;
+  height: 100vh;
+  align-items: center;
+  /* margin-bottom: 40px;  */
+}
+
+@media(max-width:1153px){
+  .main{
+    height: initial;
+  }
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--clr1);
+  background: transparent;
+  transform: translate(10px, 3px);
+  z-index: -1;
+}
+
+.highlight {
+  background-color: var(--clr3);
+  border-radius: 25px 5px 50px 2px;
+  display: inline-block;
+}
+
+/* About */
+
+/* .about {
+  padding-top: 40px;
+} */
+
+.about h1 {
+  text-align: center;
+}
+
+
+.about h1,
+.projects h1,
+.skills h1 {
+  font-size: 2em; 
+}
+
+/* Skills */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills h1 {
+  text-align: center;
+}
+
+.skills-logo {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skills-logo p {
+  text-align: center;
+}
+
+/* Projects */
+
+.projects h1 {
+  text-align: center;
+}
+
+.projects-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-image {
+  mask-image: url("/static/cardmask.svg");
+  -webkit-mask-image: url("/static/cardmask.svg");
+  mask-size: cover;
+  -webkit-mask-size: url("/static/cardmask.svg");
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  width: 100%;
+  aspect-ratio: 16/10;
+}
+
+.project-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background: var(--clr1);
+  color: var(--clr2);
+  padding: 15px 0;
+}
+
+footer a{
+  color: var(--clr2);
+}
+
+.pages p{
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.pages a{
+  font-size: 16px;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+}
+
+.socials p{
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.socials a{
+  font-size: 16px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animations */
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-image {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Hover Effect for Skill Icons */
+.skills-logo img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Project Card Hover Effect */
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 15px;
+  }
+}
+
+/* Navbar */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-links {
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+/* Main Section */
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: auto;
+    padding: 20px 0;
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+  }
+}
+
+/* About Section */
+@media (max-width: 768px) {
+  .about p {
+    font-size: 0.8em;
+    line-height: 1.5;
+  }
+}
+
+/* Skills Section */
+@media (max-width: 768px) {
+  .skills-logo {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .skills-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skills-logo p {
+    font-size: 0.8em; 
+  }
+}
+
+/* Projects Section */
+@media (max-width: 768px) {
+  .projects-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-image {
+    aspect-ratio: 4/3;
+  }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .pages,
+  .socials {
+    align-items: center;
+  }
+}
+
+
